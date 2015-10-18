@@ -1,0 +1,78 @@
+\documentclass[openany]{book}
+\usepackage{appendix}
+\usepackage{tex/plugins/todonotes}
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage[backend=biber]{biblatex}
+\usepackage{booktabs}
+\usepackage{pgfgantt}
+\usepackage{tex/plugins/ulem}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{float}
+%Tikz-UML Dependancies - pdflscape used to fix landscape sections in pdf export
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage{ifthen}
+\usepackage{xstring}
+\usepackage{calc}
+\usepackage{pgfopts}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tex/plugins/tikz-uml}
+\usepackage{pdfpages}
+\usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
+    decorations.pathreplacing,decorations.pathmorphing,shapes,%
+    matrix,shapes.symbols}
+\input{tex/plugins/tikz_styles.tex}
+
+\onehalfspacing
+\renewcommand{\chaptername}{} % Remove chapter numbering
+\bibliography{bib/project.bib}{}
+
+\title{COMP208 - Group Software Project\\Ballmer Peak}
+\author{Michael Chadwick}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\part{Requirements}
+\input{tex/req.tex}
+
+%\part{Design}
+%\input{tex/des.tex}
+
+%\part{User Manual}
+%\input)(tex/usrMan.tex)
+
+%\part{Portfolio}
+%\input{tex/portfolio.tex}
+
+%\begin{appendices}
+%\appendixpage % Page empty but for page# and "Appendicies" precedes appendicies
+%\noappendicestocpagenum % Remove the page# from the TOC for that ^ page
+%\addappheadtotoc % "Appendicies" precedes the listing of appendicies in the TOC
+
+%\chapter{Minutes}
+%\input{tex/append/minutes.tex}
+%\chapter{Screenshots}
+%\input{tex/append/screenshots.tex}
+%\chapter{Deadlines}
+%\input{tex/append/deadlines.tex}
+%\chapter{TODO}
+%\input{tex/append/todo.tex}
+%\chapter{\sout{Bugs} Accidental Features}
+%\input{tex/append/bugs.tex}
+%\chapter{Licence}
+%\input{tex/append/licence.tex}
+%\chapter{Source Listing}
+%\input{tex/append/source/source.tex}
+%\chapter{Programmers Reference Manual}
+%\includepdf[pages={-}]{refman.pdf}
+%\end{appendices}
+
+\printbibliography
+
+\end{document}
