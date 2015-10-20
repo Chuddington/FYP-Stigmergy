@@ -5,7 +5,12 @@
 \usepackage{graphicx}
 \usepackage{comment}
 \usepackage{setspace}
-\usepackage[backend=biber]{biblatex}
+\usepackage[
+            backend=biber,
+            sortlocale=en_GB,
+            natbib=true,
+            doi=true,
+            ]{biblatex}
 \usepackage{booktabs}
 \usepackage{pgfgantt}
 \usepackage{tex/plugins/ulem}
@@ -23,6 +28,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{tex/plugins/tikz-uml}
 \usepackage{pdfpages}
+\usepackage{hyperref}
 \usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
     decorations.pathreplacing,decorations.pathmorphing,shapes,%
     matrix,shapes.symbols}
@@ -30,7 +36,7 @@
 
 \onehalfspacing
 \renewcommand{\chaptername}{} % Remove chapter numbering
-\bibliography{bib/project.bib}{}
+\addbibresource{./bib/project.bib}
 
 \title{Stigmergy for Multi-Robot Coverage}
 \author{Michael Chadwick}
@@ -39,8 +45,8 @@
 \maketitle
 \tableofcontents
 
-\part{Requirements}
-\input{tex/req.tex}
+\chapter{Requirements}
+\include{tex/req}
 
 %\part{Design}
 %\input{tex/des.tex}

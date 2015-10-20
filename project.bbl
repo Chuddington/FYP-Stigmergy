@@ -1,0 +1,142 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{nty}{nty}
+    \entry{ePuckSite}{online}{}
+      \name{author}{2}{}{%
+        {{hash=9bfac1ee362473d2cc6e9468ba4ac841}{Bonani}{B\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=e5ddc7316d0ced1da47649dcf0b45593}{Mondada}{M\bibinitperiod}{Francesco}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{e4fd7a83eb21eb7dbfa147ffa5c821e1}
+      \strng{fullhash}{e4fd7a83eb21eb7dbfa147ffa5c821e1}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{E-Puck Education Robot}
+      \verb{url}
+      \verb http://www.e-puck.org/
+      \endverb
+    \endentry
+    \entry{Broecker2015}{incollection}{}
+      \name{author}{5}{}{%
+        {{hash=a9e32a36a3dc579b667d49cf43839abc}{Broecker}{B\bibinitperiod}{Bastian}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=2197e6ca21e70d629ab20c379ebd0982}{Caliskanelli}{C\bibinitperiod}{Ipek}{I\bibinitperiod}{}{}{}{}}%
+        {{hash=abe873d21d37af0af9b6711c1efd9caa}{Tuyls}{T\bibinitperiod}{Karl}{K\bibinitperiod}{}{}{}{}}%
+        {{hash=49d05f77d080aad710edc06fefeafa32}{Sklar}{S\bibinitperiod}{ElizabethI.}{E\bibinitperiod}{}{}{}{}}%
+        {{hash=a657fe5a3ed8a09d83c5b599ec77d4b1}{Hennes}{H\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=ab72a45dc5f8df51d7b8161916c32edf}{Dixon}{D\bibinitperiod}{Clare}{C\bibinitperiod}{}{}{}{}}%
+        {{hash=abe873d21d37af0af9b6711c1efd9caa}{Tuyls}{T\bibinitperiod}{Karl}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{620ef40e47b10a8a06d9cee373bbbb4b}
+      \strng{fullhash}{dbbcf90e4aedf597577922fdbd58a792}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Towards Autonomous Robotic Systems}
+      \field{isbn}{978-3-319-22415-2}
+      \field{series}{Lecture Notes in Computer Science}
+      \field{title}{Hybrid Insect-Inspired Multi-Robot Coverage in Complex Environments}
+      \field{volume}{9287}
+      \field{year}{2015}
+      \field{pages}{56\bibrangedash 68}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/978-3-319-22416-9_8
+      \endverb
+    \endentry
+    \entry{Ranjbar-Sahraei2012}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=d32637f6c9b7b78405d5d0dff77dc70f}{Ranjbar-Sahraei}{R\bibinithyphendelim S\bibinitperiod}{Bijan}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=18d8f787c09dc02a2aa110c7b254aa49}{Weiss}{W\bibinitperiod}{Gerhard}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=47b6e6ed47469bff20f299cc26fde381}{Nakisaee}{N\bibinitperiod}{Ali}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=56ab66802f80b611f8b2c5d04d9e6000}{Timm}{T\bibinitperiod}{IngoJ.}{I\bibinitperiod}{}{}{}{}}%
+        {{hash=0faac082a7f8ed96ad44e82e2462ec49}{Guttmann}{G\bibinitperiod}{Christian}{C\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{5a39f0c73aa971d6681c7ee133973b42}
+      \strng{fullhash}{5a39f0c73aa971d6681c7ee133973b42}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Multiagent System Technologies}
+      \field{isbn}{978-3-642-33689-8}
+      \field{series}{Lecture Notes in Computer Science}
+      \field{title}{A Multi-robot Coverage Approach Based on Stigmergic Communication}
+      \field{volume}{7598}
+      \field{year}{2012}
+      \field{pages}{126\bibrangedash 138}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/978-3-642-33690-4_13
+      \endverb
+    \endentry
+    \entry{Yanovski2003}{article}{}
+      \name{author}{3}{}{%
+        {{hash=82910ffe1bf90501a9f260d34aeaf1d2}{Yanovski}{Y\bibinitperiod}{Vladimir}{V\bibinitperiod}{}{}{}{}}%
+        {{hash=ecabbf3d5bb7e14e965bb4af7995f65b}{Wagner}{W\bibinitperiod}{Israel\bibnamedelima A.}{I\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{hash=422a0ea9240e7fb502ac312c59ef3527}{Bruckstein}{B\bibinitperiod}{Alfred\bibnamedelima M.}{A\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{95a7ded3ab011caad2f6fd90c8e1a821}
+      \strng{fullhash}{95a7ded3ab011caad2f6fd90c8e1a821}
+      \field{sortinit}{Y}
+      \field{sortinithash}{3cbc1e3d286284cedb5e5218a3248f94}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0178-4617}
+      \field{journaltitle}{Algorithmica}
+      \field{number}{3}
+      \field{title}{A Distributed Ant Algorithm for\protect Efficiently Patrolling a Network}
+      \field{volume}{37}
+      \field{year}{2003}
+      \field{pages}{165\bibrangedash 186}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1007/s00453-003-1030-9
+      \endverb
+      \keyw{Ant algorithms; Euler cycle; Blanket time; Graph algorithms}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
