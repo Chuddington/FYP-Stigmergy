@@ -35,16 +35,14 @@
 
 \onehalfspacing
 \renewcommand{\chaptername}{} % Remove chapter numbering
-\addbibresource{./bib/project.bib}
-
+{\renewcommand\newpage{}\addbibresource{./bib/project.bib}}
 \title{Stigmergy for Multi-Robot Coverage}
 \author{Michael Chadwick}
 
-\begin{document}
-\maketitle
-\tableofcontents
+%getting the bibliography on the same page without page breaking:
 
-\chapter{Requirements}
+\begin{document}
+
 \include{tex/req}
 
 %\part{Design}
