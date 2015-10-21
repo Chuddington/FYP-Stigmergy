@@ -1,4 +1,4 @@
-\documentclass[openany,a4paper,12pt]{book}
+\documentclass[oneside,openany,a4paper,12pt]{book}
 \usepackage[utf8]{inputenc}
 \usepackage{appendix}
 \usepackage{tex/plugins/todonotes}
@@ -35,7 +35,7 @@
 
 \onehalfspacing
 \renewcommand{\chaptername}{} % Remove chapter numbering
-{\renewcommand\newpage{}\addbibresource{./bib/project.bib}}
+\bibliography{./bib/project.bib}
 \title{Stigmergy for Multi-Robot Coverage}
 \author{Michael Chadwick}
 
@@ -44,7 +44,6 @@
 \begin{document}
 
 \include{tex/req}
-
 %\part{Design}
 %\input{tex/des.tex}
 
@@ -76,7 +75,6 @@
 %\chapter{Programmers Reference Manual}
 %\includepdf[pages={-}]{refman.pdf}
 %\end{appendices}
-
 \printbibliography
 
 \end{document}
