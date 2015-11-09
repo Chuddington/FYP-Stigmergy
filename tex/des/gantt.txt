@@ -1,0 +1,22 @@
+\begin{landscape}
+\begin{figure}[]
+    \caption{Project Gantt Chart}
+    \bigskip
+    \begin{ganttchart}[
+        x unit=0.075cm,
+        y unit chart=0.39cm,
+        time slot format=little-endian,
+        progress=today,
+        today=19.11.15,
+        ]{1.10.15}{14.6.16}
+        
+        \gantttitlecalendar{year, month=name} \\
+        \ganttgroup{Specification}{1.10.15}{22.10.15} \\
+        \ganttbar{Domain Research}{1.10.15}{11.10.15} \\
+        \ganttbar{Graphics Engine Research}{11.10.15}{13.10.15} \\
+		\ganttbar{Requirements Breakdown}{13.10.15}{15.10.15} \\
+        \ganttbar{Writing Specification}{16.10.15}{21.10.15} \\
+        \ganttmilestone{Submission}{22.10.15} \\
+
+\end{ganttchart}
+\end{figure}
