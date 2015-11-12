@@ -1,5 +1,4 @@
-\section{Design Basics} \label{desBase}
-\input{./tex/des/desBase}
+\section{} \label{desBase}
 \section{Summary of Proposal} \label{desProSum}
 \input{./tex/des/desProSum}
 \section{System Design} \label{desSys}
