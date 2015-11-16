@@ -43,3 +43,16 @@ can be used to indicate which state is currently running.
 Evaluating the Project will fall into two categories:  the constructed dark
 room and the implementation of the algorithms, StiCo and potentially HybaCo
 too.
+
+The dark room will be evaluated based on how little light gets through the
+covering and how the edges can keep the robots from leaving the sectioned area.
+Testing for the light levels can be done by looking at the constructed arena to
+see how strongly the flooring glows after normalising it's charge.  A torch can
+then be shone into the arena to see whether the floor can successfully hold the
+light for an amount of time.
+
+\label{desBaseEval}
+For evaluating the program, the robots need to interact with the light trails
+they leave behind in some form to help evaluate the effectiveness of the dark 
+room.  This is achieved by implementing the StiCo algorithm, where the robots
+will change direction when they come into contact with a light trail.
