@@ -1,14 +1,45 @@
 %description of anticipated components
+Anticipated components for the project include documentation for each stage of
+development, source code and it's compiled version of the StiCo algorithm for
+the e-Puck robotic platform.  The final component will be a constructed arena
+for testing the source code with the e-Puck system, along with blueprints that
+are provided in the Design phase of the project.  These together will complete
+the aim of providing a dark room for researching and testing of algorithms for
+the e-Puck system, along with a demonstration program to show whether the 
+constructed arena is successful.
 
 %description of data structures to be used
+Currently, it is believed that the project will not contain data structures
+such as Sets, Queues, Arrays or Stacks.  The program will have basic datatype
+variables to store the radius of the circular path the robot will take, a 
+variable to check whether the robot has scanned a light path successfully and,
+time permitting, an integer variable to be used as a state machine - running
+StiCo initially then BeePCo/HybaCo should the user wish the state to change.
+The changing of state could be called by pressing a button on the robot before
+it starts it's run, for example.
 
 %algorithms to manipulate these data structures
+With the StiCo algorithm, no user input would be required to manipulate the
+data structures in place.  When a light trail is detected, the motor strength
+to each wheel will be swapped to allow the robot to turn in the other 
+direction.  If the HybaCo algorithm is implemented, buttons on the e-Puck 
+system could be used to differentiate between running the initial StiCo
+implementation and the potential implementation of the HybaCo algorithm in a
+similar manner to a state machine e.g. 2 button presses could indicate running
+the HybaCo algorithm whereas 1 button push will run the StiCo algorithm only.
 
 %design of interfaces
+Apart from a connection to a computer to pass compiled files over to the e-Puck
+system, there are no initial plans for an interface for the project.  An 
+interface will only be considered as required, such as to implement a state
+machine to the robots so the user may pick and choose which algorithm each
+robot runs.  Should this be the case, the buttons available on the robot will 
+be the user interface, where the user pushes a single button to denote which
+algorithm should be run.  If a second button is available on the robot, this
+will be used to execute the currently selected algorithm.  Lights on the robot
+can be used to indicate which state is currently running.
 
 %description of evaluation of system 
-
-%Presentation gives a summary
-
-%Documentation gives all details
-
+Evaluating the Project will fall into two categories:  the constructed dark
+room and the implementation of the algorithms, StiCo and potentially HybaCo
+too.
