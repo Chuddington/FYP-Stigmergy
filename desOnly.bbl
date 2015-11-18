@@ -1,0 +1,248 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{nty}{nty}
+    \entry{Broecker2015}{incollection}{}
+      \name{author}{5}{}{%
+        {{hash=a9e32a36a3dc579b667d49cf43839abc}{Broecker}{B\bibinitperiod}{Bastian}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=2197e6ca21e70d629ab20c379ebd0982}{Caliskanelli}{C\bibinitperiod}{Ipek}{I\bibinitperiod}{}{}{}{}}%
+        {{hash=abe873d21d37af0af9b6711c1efd9caa}{Tuyls}{T\bibinitperiod}{Karl}{K\bibinitperiod}{}{}{}{}}%
+        {{hash=49d05f77d080aad710edc06fefeafa32}{Sklar}{S\bibinitperiod}{ElizabethI.}{E\bibinitperiod}{}{}{}{}}%
+        {{hash=a657fe5a3ed8a09d83c5b599ec77d4b1}{Hennes}{H\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=ab72a45dc5f8df51d7b8161916c32edf}{Dixon}{D\bibinitperiod}{Clare}{C\bibinitperiod}{}{}{}{}}%
+        {{hash=abe873d21d37af0af9b6711c1efd9caa}{Tuyls}{T\bibinitperiod}{Karl}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{620ef40e47b10a8a06d9cee373bbbb4b}
+      \strng{fullhash}{dbbcf90e4aedf597577922fdbd58a792}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Towards Autonomous Robotic Systems}
+      \field{isbn}{978-3-319-22415-2}
+      \field{series}{Lecture Notes in Computer Science}
+      \field{title}{Hybrid Insect-Inspired Multi-Robot Coverage in Complex Environments}
+      \field{volume}{9287}
+      \field{year}{2015}
+      \field{pages}{56\bibrangedash 68}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/978-3-319-22416-9_8
+      \endverb
+    \endentry
+    \entry{Broecker2015Demo}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=a9e32a36a3dc579b667d49cf43839abc}{Broecker}{B\bibinitperiod}{Bastian}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=2197e6ca21e70d629ab20c379ebd0982}{Caliskanelli}{C\bibinitperiod}{Ipek}{I\bibinitperiod}{}{}{}{}}%
+        {{hash=abe873d21d37af0af9b6711c1efd9caa}{Tuyls}{T\bibinitperiod}{Karl}{K\bibinitperiod}{}{}{}{}}%
+        {{hash=a9f7f64d8149bb8c95e8b50c6330dcb5}{Sklar}{S\bibinitperiod}{Elizabeth}{E\bibinitperiod}{}{}{}{}}%
+        {{hash=a657fe5a3ed8a09d83c5b599ec77d4b1}{Hennes}{H\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Istanbul, Turkey}%
+      }
+      \list{publisher}{2}{%
+        {International Foundation for Autonomous Agents}%
+        {Multiagent Systems}%
+      }
+      \strng{namehash}{620ef40e47b10a8a06d9cee373bbbb4b}
+      \strng{fullhash}{26a87d8087194dd69744f0ab6756e323}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2015 International Conference on Autonomous Agents and Multiagent Systems}
+      \field{isbn}{978-1-4503-3413-6}
+      \field{series}{AAMAS '15}
+      \field{title}{Social Insect-Inspired Multi-Robot Coverage}
+      \field{year}{2015}
+      \field{pages}{1775\bibrangedash 1776}
+      \range{pages}{2}
+      \verb{url}
+      \verb http://dl.acm.org/citation.cfm?id=2772879.2773431
+      \endverb
+      \keyw{ant-inspired,bee-inspired,bio-inspired,coverage,multi-robot systems}
+    \endentry
+    \entry{Caliskanelli2015}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=2197e6ca21e70d629ab20c379ebd0982}{Caliskanelli}{C\bibinitperiod}{Ipek}{I\bibinitperiod}{}{}{}{}}%
+        {{hash=a9e32a36a3dc579b667d49cf43839abc}{Broecker}{B\bibinitperiod}{Bastian}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=abe873d21d37af0af9b6711c1efd9caa}{Tuyls}{T\bibinitperiod}{Karl}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=652eb241bb01a83eb14c613a7c20681d}{Headleand}{H\bibinitperiod}{Christopher\bibnamedelima J.}{C\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=f08944945d5f5abe1efab5339e9b8e8e}{Teahan}{T\bibinitperiod}{William\bibnamedelima J.}{W\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=b8b9759ff94fe947407441c8e77496b6}{Ap\bibnamedelima Cenydd}{A\bibinitperiod\bibinitdelim C\bibinitperiod}{Llyr}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{d0d1320457dc61a9420228f4b2862302}
+      \strng{fullhash}{d0d1320457dc61a9420228f4b2862302}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Artificial Life and Intelligent Agents}
+      \field{isbn}{978-3-319-18083-0}
+      \field{series}{Communications in Computer and Information Science}
+      \field{title}{Multi-Robot Coverage: A Bee Pheromone Signalling Approach}
+      \field{volume}{519}
+      \field{year}{2015}
+      \field{pages}{124\bibrangedash 140}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1007/978-3-319-18084-7_10
+      \endverb
+      \keyw{Multi-robot systems; Bio-inspired; Bee-inspired; Coverage}
+    \endentry
+    \entry{myReq}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8d4cc8ccaed84f23dc75c54641731694}{Chadwick}{C\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {Dept. of Computer Science, University of Liverpool}%
+      }
+      \strng{namehash}{8d4cc8ccaed84f23dc75c54641731694}
+      \strng{fullhash}{8d4cc8ccaed84f23dc75c54641731694}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Stigmergy for Multi-Robot Coverage: Project Requirements Document}
+      \field{urlday}{12}
+      \field{urlmonth}{11}
+      \field{urlyear}{2015}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://github.com/Chuddington/FYP-Stigmergy/blob/master/reqOnly.pdf
+      \endverb
+    \endentry
+    \entry{Ranjbar-Sahraei2012}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=d32637f6c9b7b78405d5d0dff77dc70f}{Ranjbar-Sahraei}{R\bibinithyphendelim S\bibinitperiod}{Bijan}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=18d8f787c09dc02a2aa110c7b254aa49}{Weiss}{W\bibinitperiod}{Gerhard}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=47b6e6ed47469bff20f299cc26fde381}{Nakisaee}{N\bibinitperiod}{Ali}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=56ab66802f80b611f8b2c5d04d9e6000}{Timm}{T\bibinitperiod}{IngoJ.}{I\bibinitperiod}{}{}{}{}}%
+        {{hash=0faac082a7f8ed96ad44e82e2462ec49}{Guttmann}{G\bibinitperiod}{Christian}{C\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{5a39f0c73aa971d6681c7ee133973b42}
+      \strng{fullhash}{5a39f0c73aa971d6681c7ee133973b42}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Multiagent System Technologies}
+      \field{isbn}{978-3-642-33689-8}
+      \field{series}{Lecture Notes in Computer Science}
+      \field{title}{A Multi-robot Coverage Approach Based on Stigmergic Communication}
+      \field{volume}{7598}
+      \field{year}{2012}
+      \field{pages}{126\bibrangedash 138}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/978-3-642-33690-4_13
+      \endverb
+    \endentry
+    \entry{Ranjbar-Sahraei2012Demo}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=d32637f6c9b7b78405d5d0dff77dc70f}{Ranjbar-Sahraei}{R\bibinithyphendelim S\bibinitperiod}{Bijan}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=18d8f787c09dc02a2aa110c7b254aa49}{Weiss}{W\bibinitperiod}{Gerhard}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=47b6e6ed47469bff20f299cc26fde381}{Nakisaee}{N\bibinitperiod}{Ali}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Valencia, Spain}%
+      }
+      \list{publisher}{2}{%
+        {International Foundation for Autonomous Agents}%
+        {Multiagent Systems}%
+      }
+      \strng{namehash}{5a39f0c73aa971d6681c7ee133973b42}
+      \strng{fullhash}{5a39f0c73aa971d6681c7ee133973b42}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 11th International Conference on Autonomous Agents and Multiagent Systems - Volume 3}
+      \field{isbn}{0-9817381-3-3, 978-0-9817381-3-0}
+      \field{series}{AAMAS '12}
+      \field{title}{Stigmergic Coverage Algorithm for Multi-robot Systems (Demonstration)}
+      \field{year}{2012}
+      \field{pages}{1497\bibrangedash 1498}
+      \range{pages}{2}
+      \verb{url}
+      \verb http://dl.acm.org/citation.cfm?id=2343896.2344079
+      \endverb
+      \keyw{multi-agent systems,multi-robot coverage,stigmergy}
+    \endentry
+    \entry{Ranjbar-Sahraei2013}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=d32637f6c9b7b78405d5d0dff77dc70f}{Ranjbar-Sahraei}{R\bibinithyphendelim S\bibinitperiod}{Bijan}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=18d8f787c09dc02a2aa110c7b254aa49}{Weiss}{W\bibinitperiod}{Gerhard}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=abe873d21d37af0af9b6711c1efd9caa}{Tuyls}{T\bibinitperiod}{Karl}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {St. Paul, MN, USA}%
+      }
+      \list{publisher}{2}{%
+        {International Foundation for Autonomous Agents}%
+        {Multiagent Systems}%
+      }
+      \strng{namehash}{dcf1d9c81498a1dcc91e8ea53d117068}
+      \strng{fullhash}{dcf1d9c81498a1dcc91e8ea53d117068}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2013 International Conference on Autonomous Agents and Multi-agent Systems}
+      \field{isbn}{978-1-4503-1993-5}
+      \field{series}{AAMAS '13}
+      \field{title}{A Macroscopic Model for Multi-robot Stigmergic Coverage}
+      \field{year}{2013}
+      \field{pages}{1233\bibrangedash 1234}
+      \range{pages}{2}
+      \verb{url}
+      \verb http://dl.acm.org/citation.cfm?id=2484920.2485159
+      \endverb
+      \keyw{environment coverage,macroscopic probabilistic models,stigmergic communication,swarm robots}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

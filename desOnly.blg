@@ -1,0 +1,15 @@
+[0] Config.pm:324> INFO - This is Biber 2.1
+[0] Config.pm:327> INFO - Logfile is 'desOnly.blg'
+[74] biber-MSWIN:273> INFO - === %a %b %e, %Y, %H:%M:%S
+[74] Biber.pm:333> INFO - Reading 'desOnly.bcf'
+[445] Biber.pm:645> INFO - Found 7 citekeys in bib section 0
+[474] Biber.pm:2977> INFO - Processing section 0
+[514] Biber.pm:3115> INFO - Looking for bibtex format file './bib/project.bib' for section 0
+[798] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[1014] bibtex.pm:895> INFO - Found BibTeX data source './bib/project.bib'
+[1185] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1185] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1185] Biber.pm:2854> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
+[1186] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
+[1203] bbl.pm:505> INFO - Writing 'desOnly.bbl' with encoding 'UTF-8'
+[1262] bbl.pm:596> INFO - Output to desOnly.bbl
