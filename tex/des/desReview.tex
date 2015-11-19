@@ -1,5 +1,52 @@
 %Modified Gantt chart
+%\subsection{Gantt Chart}
+\begin{ganttchart}[y unit chart=0.9cm]{24}{24}
+\gantttitle{2015}{12} \gantttitle{2016}{12} \\
+\gantttitlelist{1,...,12}{1} \gantttitlelist{1,...,12}{1} \\
+\ganttgroup{Req.}{1}{4} \\
+\ganttbar[name=reqRes]{Research}{1}{3} \\
+\ganttbar[name=reqWrite]{Req. Write Up}{4}{4} \\
+\ganttlink{reqRes}{reqWrite}
+
+\ganttgroup{Des.}{5}{8} \\
+\ganttbar[name=desArena]{ArenaBlueprints}{5}{7} \\
+\ganttbar[name=desAlSearch]{AlgorithmResearch}{5}{6} \\
+\ganttbar[name=desPseudo]{PseudoCode}{7}{7} \\
+\ganttmilestone[name=milDesFin]{Des. Content Finished}{7} \\
+\ganttbar[name=desWrite]{Des. Write Up}{8}{8} \\
+\ganttlink{desArena}{milDesFin}
+\ganttlink{desAlSearch}{desPseudo}
+\ganttlink{desPseudo}{milDesFin}
+\ganttlink{milDesFin}{desWrite}
+
+\ganttgroup{Imp.}{9}{20} \\
+\ganttbar[name=impArena]{Build Arena}{9}{11} \\
+\ganttbar[name=impFamiliar]{Coding Robot famil.}{10}{11} \\
+\ganttmilestone[name=milArenaFin]{Built Dark Room}{11} \\
+\ganttbar[name=impBasicCode]{Basic Code}{12}{14} \\
+\ganttbar[name=impAdvCode]{Advanced Code}{15}{17} \\
+\ganttmilestone[name=milCodeFin]{Finished Coding}{17} \\
+\ganttbar[name=impRefactor]{Refactor}{18}{18} \\
+\ganttbar[name=impWrite]{Imp. Write Up}{19}{20} \\
+\ganttlink{impArena}{milArenaFin}
+\ganttlink{impFamiliar}{milArenaFin}
+\ganttlink{milArenaFin}{impBasicCode}
+\ganttlink{impBasicCode}{impAdvCode}
+\ganttlink{impAdvCode}{milCodeFin}
+\ganttlink{milCodeFin}{impRefactor}
+\ganttlink{milCodeFin}{impWrite}
+\end{ganttchart}
+\clearpage
 
 %Progress to date
+\subsection{Current Progress}
+The project is currently going slightly ahead of schedule.  I am 
+reading on how to implement a coding solution for the e-Puck robotic system and
+looking for materials to make the posts used to hold up the Cover for the dark 
+room.  
 
 %necessary changes in the project up to this point
+\subsection{Changes within the project}
+The algorithm which will be implemented is now defined as the StiCo algorithm.
+If there are more unforeseeable changes, such as having to change the dimensions
+of the arena, the proposed solution should be adequately adaptable.  
