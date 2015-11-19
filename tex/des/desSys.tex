@@ -1,45 +1,44 @@
 %description of anticipated components
+\subsection{Project Components} \label{desSysComp}
 Anticipated components for the project include documentation for each stage of
 development, source code and it's compiled version of the StiCo algorithm for
 the e-Puck robotic platform.  The final component will be a constructed arena
 for testing the source code with the e-Puck system, along with blueprints that
 are provided in the Design phase of the project.
 
-These together will complete
-the aim of providing a dark room for researching and testing of algorithms for
-the e-Puck system, along with a demonstration program to show whether the 
-constructed arena is successful.
+These together will complete the aim of providing a dark room for researching
+and testing of algorithms for the e-Puck system, along with a demonstration
+program to show whether the constructed arena is successful.
 
 %description of data structures to be used
-Currently, it is believed that the project will not contain data structures
-such as Sets, Queues, Arrays or Stacks.  The program will have basic datatype
+\subsection{Proposed Data Structures} \label{desSysData}
+Currently, it the project will not contain advanced data structures
+such as Sets, Queues, Arrays or Stacks.  The program will have basic data-type
 variables to store the radius of the circular path the robot will take, a 
 variable to check whether the robot has scanned a light path successfully and,
 time permitting, an integer variable to be used as a state machine - running
 StiCo initially then BeePCo/HybaCo should the user wish the state to change.
-The changing of state could be called by pressing a button on the robot before
-it starts it's run, for example.
+The changing of state can be called by pressing a button on the robot, which 
+will make the agent to execute the selected algorithm.
 
 %algorithms to manipulate these data structures
+\subsubsection{Data Structure Manipulation} \label{desSysDataMan}
 With the StiCo algorithm, no user input would be required to manipulate the
 data structures in place.  When a light trail is detected, the motor strength
 to each wheel will be swapped to allow the robot to turn in the other 
-direction.  If the HybaCo algorithm is implemented, buttons on the e-Puck 
-system could be used to differentiate between running the initial StiCo
-implementation and the potential implementation of the HybaCo algorithm in a
-similar manner to a state machine e.g. 2 button presses could indicate running
-the HybaCo algorithm whereas 1 button push will run the StiCo algorithm only.
+direction.  If the HybaCo algorithm is implemented concurrently, buttons on the
+e-Puck system would be used to differentiate between running the StiCo
+implementation and the HybaCo algorithm.
 
 %design of interfaces
-Apart from a connection to a computer to pass compiled files over to the e-Puck
-system, there are no initial plans for an interface for the project.  An 
-interface will only be considered as required, such as to implement a state
-machine to the robots so the user may pick and choose which algorithm each
-robot runs.  Should this be the case, the buttons available on the robot will 
-be the user interface, where the user pushes a single button to denote which
-algorithm should be run.  If a second button is available on the robot, this
-will be used to execute the currently selected algorithm.  Lights on the robot
-can be used to indicate which state is currently running.
+\subsection{Interface Design} \label{desSysInt}
+As the project is using a robotic system, the interface between user and program
+is already defined.  Extending the deliverables to include an implementation of
+the HybaCo algorithm will mean applying an event-driven stage in the program, to
+allow the user to press a button on the e-Puck system to define which algorithm
+should run.  This will act as a basic state machine so the user may choose
+which algorithm each robot executes. Lights on the robot can be used to indicate
+which state has been selected.
 
 %description of evaluation of system 
 \label{desSysEval}
@@ -50,33 +49,32 @@ too.
 The dark room will be evaluated based on how little light gets through the
 covering and how the edges can keep the robots from leaving the sectioned area.
 Testing for the light levels can be done by looking at the constructed arena to
-see how strongly the flooring glows after normalising it's charge.  A torch can
-then be shone into the arena to see whether the floor can successfully hold the
-light for an amount of time.
+see how strongly the flooring glows after normalising in the environment.  A 
+torch can then be shone into the arena to see whether the floor can successfully
+hold the light for an amount of time.
 
 For evaluating the program, the robots need to interact with the light trails
 they leave behind in some form to help evaluate the effectiveness of the dark 
 room.  This is achieved by implementing the StiCo algorithm, where the robots
 will change direction when they come into contact with a light trail.
 
+\clearpage
 
-%OO-Based Design
-
+\subsection{Design Diagrams} \label{desSysDiag}
 %use-case diagram
-\begin{figure}[h!]
-  \label{desUseCase}
+\begin{figure}[h!] \label{desSysUse}
   \begin{tikzpicture}
-    \begin{umlsystem}{Schedule}
-      \umlusecase[x=-3,name=useState]{Set State}
-      \umlusecase[x=3,name=useScan]{Scan Floor}
-      \umlusecase[x=-2,y=-2,name=useMove]{Move Around}
-      \umlusecase[x=3, y=-2,name=useRotate]{Rotate}
-      \umlusecase[x=-3,y=-4,name=useSwap]{Swap Motor Strength}
-      \umlusecase[x=3,y=-4,name=useConn]{Connect to other Robots} 
+    \begin{umlsystem}{Robot Functions}
+      \umlusecase[x=0,y=0, name=useState]{Set State}
+      \umlusecase[x=0,y=-1,name=useScan]{Scan Floor}
+      \umlusecase[x=0,y=-2,name=useMove]{Move Around}
+      \umlusecase[x=0,y=-3,name=useRotate]{Rotate}
+      \umlusecase[x=0,y=-4,name=useSwap]{Swap Motor Strength}
+      \umlusecase[x=0,y=-5,name=useConn]{Connect to other Robots} 
     \end{umlsystem}
 
-    \umlactor[x=-8]{User}
-    \umlactor[x=8]{Robot}
+    \umlactor[x=-6,y=-3.5]{User}
+    \umlactor[x=6,y=-3.5]{Robot}
 
     \umlassoc{User}{useState}
     \umlassoc{Robot}{useState}
@@ -87,46 +85,221 @@ will change direction when they come into contact with a light trail.
     \umlassoc{Robot}{useConn}
   \end{tikzpicture}
   \caption{Use Case Diagram for proposed software solution}
+  \label{desSysUse}
 \end{figure}
 
-%interaction chart
-%list of objects, attributes & methods
-%pseudo code of main methods
-%interface design
+%Class Diagram
+\begin{figure}[h!] 
+  \begin{tikzpicture}
+    \begin{umlpackage}{StiCo Algorithm}
+      \umlclass[x=0,y=0]{Movement}{
+        headMotorPower : short* \\ tailMotorPower : short* \\ tempPower : short*
+      }{
+        setMovementSpeed(short*, short*) : void \\ swapMovementSpeed(short*, 
+        short*) : void
+      }
+      \umlclass[y=5]{Light}{
+         lightStrength : short* \\ lightStorage : short**
+       }{
+         setLightStrength(short*) : void \\ scanLight(short**) : void
+       }
+       \umlclass[x=5,y=5]{Main}{}{}
+       
+       \umlimport{Main}{Movement}
+       \umlimport{Main}{Light}
+    \end{umlpackage}
+  \end{tikzpicture}
+  \caption{Class Diagram for StiCo Implementation}
+  \label{desSysClassStiCo}
+\end{figure}
 
+\begin{figure} 
+  \begin{tikzpicture}
+    \begin{umlpackage}{HybaCo Algorithm}
+      \begin{umlpackage}[x=0,y=0]{StiCo Algorithm}
+        \umlclass{Movement}{
+          currentPos : int*
+        }{
+          decideMovement(int x, int y) : void
+        }
+      \end{umlpackage}
+      \begin{umlpackage}[x=0,y=6]{BeePCo Algorithm}
+        \umlclass{Network}{
+          connection : bluetooth \\ connList : bluetooth*
+        }{
+          startConnection(bluetooth) : void \\ stopConnection(bluetooth) :
+          void \\ scanConnection() : bluetooth*
+        }
+      \end{umlpackage}
+      \umlclass[x=7,y=3]{Main}{}{}
+      
+      \umlimport{Main}{BeePCo Algorithm}
+      \umlimport{Main}{StiCo Algorithm}
+      \umlinclude{BeePCo Algorithm}{StiCo Algorithm}
+
+    \end{umlpackage}
+  \end{tikzpicture}
+  \caption{Class Diagram for HybaCo Implementation.  Note that the StiCo package
+           will include the Light and Movement classes defined in the previous
+           diagram(Fig. \ref{desSysClassStiCo}) -- Only additional information
+           is shown here}
+  \label{desSysClassHybaCo}
+\end{figure}
+
+\clearpage
+
+\subsection{Project Pseudo-code}
+%pseudo code of main methods
+\begin{algorithm}
+  \caption{StiCo Algorithm\cite{Ranjbar-Sahraei2012Demo} }
+  \label{desSysPseuStiCo}
+  \begin{algorithmic}[1]
+  \Require Each robot can deposit/detect pheromone trails \par
+  \State Initialise: Choose circling direction (CW/CCW)
+  \Loop
+    \While{ (no pheromone is detected) }
+      \State Circle around
+      \State deposit Pheromone
+    \EndWhile
+    \If{ (interior sensor detects pheromone) }
+      \State Reverse the circling direction
+    \Else
+      \While{ (pheromone is detected) }
+        \State Rotate
+      \EndWhile
+    \EndIf
+  \EndLoop
+  \end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+  \caption{BeePCo Algorithm\cite{Caliskanelli2015}: Differentation Cycle}
+  \label{desSysPseuBeeDiff}
+  \begin{algorithmic}[1]
+    \State every $ T_{QR} $ do
+    \If{ ($ h_{i} < threshold_{QR} $) }
+      \State $ QR_{i} = true $
+      \State broadcast $ hd = \{0, h_{QR} \} $
+    \Else
+      \State $ QR_{i} = false $
+    \EndIf
+  \end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+  \caption{BeePCo Algorithm\cite{Caliskanelli2015}: Pheromone Propagation Cycle}
+  \label{desSysPseuBeeProp}
+  \begin{algorithmic}[1]
+    \While{ $ hd $ is received}
+      \If{ ( $ hd[1] < threshold_{hopcount} $ ) }
+        \State $ h_{i} = h_{i} + hd[2] $
+        \State broadcast $ hd = \{hd[1] + 1,hd[2].K_{HOPDECAY} \} $
+      \Else
+        \State drop $ hd $
+      \EndIf
+      \State go to BeePCo Move Cycle
+    \EndWhile
+  \end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+  \caption{BeePCo Algorithm\cite{Caliskanelli2015}: Move Cycle}
+  \label{desSysPseuBeeMov}
+  \begin{algorithmic}[1]
+    \If{ (pheromone received) }
+      \State PS-guided moving decision
+    \Else
+      \State Keep moving in the direction of the last move
+      \State Broadcast communication link request
+      \State Establish local communication links
+    \EndIf
+  \end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+  \caption{BeePCo Algorithm\cite{Caliskanelli2015}: Moving Decision}
+  \label{desSysPseuBeeMovDec}
+  \begin{algorithmic}[1]
+    \If{ ( $ h_{i} > 0 $ ) }
+      \For{All the received pheromones (p) of the robot}
+        \State $ diff_{X} = p_{Sender_{X} } - currentCoordinate_{X} $
+        \State $ diff_{Y} = p_{Sender_{Y} } - currentCoordinate_{Y} $
+        \State $ \theta = ArcTangentQuadrant(diff_{Y}, diff_{X} ) $
+        \State $ component_{X} = p.hd * cos\theta $
+        \State $ component_{Y} = p.hd * sin\theta $
+        \State $ Sum_{X} += component_{X} $
+        \State $ Sum_{Y} += component_{Y} $
+      \EndFor
+    \EndIf
+    \State $ magnitude = \sqrt{ (Sum_{X} )^{2} + (Sum_{Y} )^{2} } $
+    \State $ \theta_{destination} = ArcTangentQuadrant(Sum_{Y},Sum_{X} ) $
+    \State Apply 180 degrees shift to $ \theta_{destination} $
+    \State Clear all received pheromones
+  \end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+  \caption{BeePCo Algorithm\cite{Caliskanelli2015}: Decay Cycle}
+  \label{desSysPseuBeeDecay}
+  \begin{algorithmic}[1]
+    \For{every $ T_{DECAY} $ }
+      \State $ h_{i} = h_{i}.K_{TIMEDECAY} $
+    \EndFor
+  \end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+  \caption{HybaCo Algorithm\cite{Broecker2015Demo} }
+  \label{desSysPseuHybaCo}
+  \begin{algorithmic}[1]
+    \State $ time = 0 $
+    \Loop
+      \If{Links to Neighbours Exist}
+        \State Apply BeePCo using \textsc{bee} Pheromones
+      \Else
+        \State Apply StiCo using  \textsc{ant} Pheromones
+      \EndIf
+    \EndLoop
+  \end{algorithmic}
+\end{algorithm}
+
+\clearpage
 
 %Traditional Design
-
 %data dictionaries
-%system boundary diagram
-%ER diagram
-%logical/physical table structure
-%transaction matrix
-%pseudo code of main methods
-This is the StiCo Pseudocode algorithm\cite{Ranjbar-Sahraei2012Demo}.
+\begin{landscape}
+\subsubsection{Data Dictionary}
+\begin{tabular}{| p{5cm} | p{4cm} | p{3cm} | p{6cm} |}
+  \hline
+  Attribute name & Description & Found in entity & Occurrence\\
+  \hline
+  lightStrength  & Stores current agent's light intensity & Light    &
+    Whenever the agent needs to change light intensity              \\
+  \hline
+  lightStorage   & Stores localised light intensity       & Light    &
+    When the agent scans the floor for localised messages           \\
+  \hline
+  headMotorPower & Stores left wheel movement strength    & Movement &
+    When movement speed is modified or change in rotation direction \\
+  \hline
+  tailMotorPower & Stores right wheel movement strength   & Movement &
+    When movement speed is modified or change in rotation direction \\
+  \hline
+  tempPower      & Stores headMotorPower                  & Movement &
+    Used each time the robot needs to change rotational direction   \\
+  \hline
+  currentPos     & Stores agent's position                & Movement &
+    Used during HybaCo execution.  Used to calculate moving decision\\
+  \hline
+  connection     & BeePCo var.; output for other agents   & Network  &
+    Used during HybaCo execution.   Denotes broadcast status        \\
+  \hline
+  connList       & BeePCo var.; list of linked agents     & Network  &
+    Used during HybaCo execution.  Stores information of connected
+    agents to obtain location -- part of Moving Decision Pseudo-code\\
+  \hline  
+\end{tabular}
+\end{landscape}
 
-This is the BeePCo Pseudocode algorithms\cite{Caliskanelli2015}.
-
-This is the HybaCo Pseudocode algorithm\cite{Broecker2015Demo}.
-%interface design
-%etc
-
-
-%Empirical Investigation
-
-%statement of hypotheses to be tested
-%description of test data to be used
-%experiment design: experiments to be performed, any control to be used
-%result analysis, including statistical techniques used
-%anticipated conclusions
-
-
-%Devising New Algorithms
-
-%description of problem to be solved
-%existing algorithms of related problem and a critical evaluation
-%approach to be used to solve the problem
-%how new algorithms analysed; mathematical and experimental analysis
-%details of mathematical/experimental analysis
 
 

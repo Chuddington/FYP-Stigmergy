@@ -24,7 +24,7 @@ role of natural pheromones."
 The Aims of the Project are to construct a testing arena for the e-Puck robotic 
 platform, notably a "dark room," which will allow the usage of the robot's
 lights to leave localised messages on flooring which can store and emit light.
-Sucessfully fulfilling the aim will mean that other users of the e-Puck system
+Successfully fulfilling the aim will mean that other users of the e-Puck system
 have a basis to create their own dark room.  This may improve research in swarm
 robotics or, if used for demonstration purposes, can bolster interest in
 applicable fields.
@@ -32,7 +32,8 @@ applicable fields.
 The primary Objective of the project are to build said arena with dimensions
 small enough to fit on a circular table approximately 60 centimetres in radius.
 As a secondary Objective, completion of the project will produce a program for
-the e-Puck robotic system to demonstrate the effectiveness of the environment the robot will be placed in.  The program will initially be an implementation of
+the e-Puck robotic system to demonstrate the effectiveness of the environment 
+the robot will be placed in.  The program will initially be an implementation of
 StiCo\cite{Ranjbar-Sahraei2012Demo}, but may have modifications dependant on
 time constraints.
 
@@ -49,14 +50,14 @@ concept that the constructed dark room is a viable environment for the testing
 of light based communication using the e-Puck system.
 
 %Summary of research and analysis done so far
-\subsection{Relevant Research and Analysis} \label{desResAnal}
 %summary of what was read, tested (e.g., techissues)? how outcomes affect
 %design?
+\subsection{Relevant Research and Analysis} \label{desResAnal}
 There has been some research on Stigmergic algorithms.  The main algorithm used
 within this project will be 
 StiCo\cite{Ranjbar-Sahraei2012,Ranjbar-Sahraei2012Demo,Ranjbar-Sahraei2013}.
 When implemented, the algorithm can help to reduce the total area of terrain
-covered by multiple robots which would improve efficiency and total area 
+covered by multiple robots which would improve efficiency and the total area 
 being patrolled upon.  This algorithm will be used to show that the dark room
 that will be built is functional.
 
@@ -69,6 +70,6 @@ area by maintaining distance through network connections.
 HybaCo is a combination of both StiCo and BeePCo -- initially running the latter
 algorithm whilst a direct connection is available and then switching to StiCo
 when connecting to other robots is no longer possible, perhaps due to range
-limitations\cite{Broecker2015}.  If time permits, I will modify the code
-to implement the BeePCo algorithm, and mold the final result into a HybaCo
-implementation.
+limitations\cite{Broecker2015}.  If time permits, the final deliverables will 
+include HybaCo, by creating a state machine to switch between the children
+algorithms StiCo and HybaCo

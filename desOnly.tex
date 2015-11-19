@@ -1,4 +1,8 @@
 \documentclass[oneside,openany,a4paper,12pt]{book}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 \usepackage[utf8]{inputenc}
 \usepackage{appendix}
 \usepackage{tex/plugins/todonotes}
@@ -7,12 +11,11 @@
 \usepackage{setspace}
 \usepackage[
             backend=biber,
-            bibstyle=numeric,
-            doi=true,
             ]{biblatex}
 \usepackage{booktabs}
+\usepackage{fancyhdr}
 \usepackage{pgfgantt}
-\usepackage{tex/plugins/ulem}
+\usepackage{fancyhdr}
 \usepackage{geometry}
 \usepackage{listings}
 \usepackage{float}
@@ -25,23 +28,36 @@
 \usepackage{pgfopts}
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{tex/plugins/tikz-uml}
+\usepackage{tikz-uml}
 \usepackage{pdfpages}
-\usepackage{hyperref}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{breakcites}
+\usepackage{microtype}
 \usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
     decorations.pathreplacing,decorations.pathmorphing,shapes,%
     matrix,shapes.symbols}
 \input{tex/plugins/tikz_styles.tex}
 
 \onehalfspacing
-\renewcommand{\chaptername}{} % Remove chapter numbering
-\bibliography{./bib/project.bib}
-\title{Stigmergy for Multi-Robot Coverage}
+\bibliography{./bib/project}
+\title{Stigmergy for Multi-Robot Coverage \\Design Documentation}
 \author{Michael Chadwick}
 
-%getting the bibliography on the same page without page breaking:
+\pagestyle{fancy}
+\fancyhf{}
+\makeatletter
+\let\runauthor\@author
+\makeatother
+\lhead{\rightmark}
+\rhead{\runauthor}
+\cfoot{\thepage}
+
+\algrenewcommand\algorithmicindent{1.0em}%
 
 \begin{document}
+
+\maketitle
+\tableofcontents
 
 \chapter{Design Documentation}
 \include{tex/des}
