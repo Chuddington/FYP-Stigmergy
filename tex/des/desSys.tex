@@ -300,6 +300,42 @@ will change direction when they come into contact with a light trail.
   \hline  
 \end{tabular}
 \end{landscape}
+\clearpage
 
+\begin{figure}
+  \includegraphics[scale=0.7]{img/ArenaTopDown.png}
+  \caption{Top down view of the proposed dark room} \label{desSysTopImg}
+\end{figure}
+\begin{figure}
+  \includegraphics[scale=0.7]{img/ArenaSideView.png}
+  \caption{Side view of the proposed dark room} \label{desSysSideImg}
+\end{figure}
+\clearpage
 
+\subsection{Arena Design}
+The design above is based on two main concepts -- flexibility and ease of use.
+Once the glow in the dark flooring is placed, four posts are then clamped to the
+edges of the table.  This ensures the flooring does not move and provides
+stability for the rope.  Using a sheepshank knot, applied to the inner edges of
+the posts as suggested in the top down view(\ref{desSysTopImg} ), it is 
+estimated that to completely fence the arena with one piece of rope it should
+approximately be 11 metres.  Using rope means that the arena can be of whatever
+size is deemed appropriate, so long as there is enough to sufficiently cover the
+generated edges.
 
+Assuming a circular table, four posts, a sheepshank knot and wrapping the rope
+around each post twice, the following algorithm calculates the minimum required
+length of rope (it is suggested that you round up to the nearest half a metre 
+to make sure):
+
+\begin{algorithm}
+  \caption{Rope Length Calculator (Measurements in centimetres) }
+  \label{desSysRope}
+  \begin{algorithmic}[1]
+    \State $ Edge = 3(\sqrt{2(r^{2} ) } ) + 2 $
+    \Comment Multiplying by 3 is due to tripling the rope over
+    \State $ WrappedPost = (postPerimeter \times 2) + 2 $
+    \Comment Trailing 2's are for securing the rope
+    \State $ TotalRequiredRope = 4(Edge + WrappedPost) $
+  \end{algorithmic}
+\end{algorithm}
