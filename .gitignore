@@ -9,3 +9,4 @@
 *.synctex.gz
 *.toc
 *.xml
+/roboCode/nbproject/private/
