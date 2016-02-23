@@ -1,0 +1,27 @@
+http://www.gctronic.com/doc/index.php/E-Puck
+
+Specifically 'position 6' - camera pointing to light
+
+For testing, check if the memory model is set to 'large code model':
+(Project -> Build Options -> Project -> MPLAB C30 tab -> memory model)
+or reduce the heap size:
+(Project -> Build Options -> Project -> MPLAB LINK30 tab)
+
+Linux/Mac need the MPLAB XC16 compiler - change the project properties
+to use the XC16 compiler instead of the C30.
+
+For working on linux, you can choose to use MPLAB or what may be 
+better is Piklab
+
+I will need a compiler for the dsPIC30F6014A microcontroller.  I can 
+use the MPLAB C Compiler for PIC24 MCUs and dsPIC DSCs (MPLAB C30) or
+I can use the PIC30 toolchain on linux.
+
+I can set up the sercom communication protocol in order to connect 
+to a computer and read images and stuff.  The monitor may require
+OpenGL, so maybe download 'GLX' on Linux; WGL for windows
+
+Linux Bootloader: http://projects.gctronic.com/E-Puck/epuck-bootloader-linux.zip
+
+e-puck GNU community: http://gna.org/projects/e-puck
+
