@@ -1,0 +1,75 @@
+%Statement of background, aims and objectives
+\subsection{Project Outline} \label{desProOut}
+"A robotic swarm is composed of a large number of simple physical robots. From
+the local interactions between the robots and the interactions of the robots
+with the environment, an efficient global intelligence emerges. Multi-robot
+coverage is the problem in which a swarm of robots needs to coordinate
+decentralised in order to effectively and efficiently cover an unknown
+environment. Examples include various monitoring, rescuing, and patrolling
+scenarios. The purpose of this project is to set up an experimental
+demonstrator, i.e. 'a dark room', in which multi-robot coverage experiments can
+be conducted using e-puck robots, implementing the stigmergy principle as
+observed in ant colonies. Ants use chemicals, called pheromones, to communicate
+with each other via the environment. However, despite of a few reports of using
+chemicals in robotic experiments, this is not a straightforward approach due to
+difficulties in implementation and limited extendability. Therefore, we take
+advantage of a glow-in- the-dark foil (i.e. a foil covered by phosphorescent
+material which absorbs UV light and re-emits the absorbed light at a lower
+intensity for up to several minutes after the original excitation). As robots
+need to emit light to the glow-in-the-dark foil, each e-puck robot is equipped
+with a UV-LED pointing toward the floor. The glowing trails will take up the
+role of natural pheromones."
+
+\subsection{Project Aims} \label{desProAim}
+The Aims of the Project are to construct a testing arena for the e-Puck robotic 
+platform, notably a "dark room," which will allow the usage of the robot's
+lights to leave localised messages on flooring which can store and emit light.
+Successfully fulfilling the aim will mean that other users of the e-Puck system
+have a basis to create their own dark room.  This may improve research in swarm
+robotics or, if used for demonstration purposes, can bolster interest in
+applicable fields.
+
+The primary Objective of the project are to build said arena with dimensions
+small enough to fit on a circular table approximately 60 centimetres in radius.
+As a secondary Objective, completion of the project will produce a program for
+the e-Puck robotic system to demonstrate the effectiveness of the environment 
+the robot will be placed in.  The program will initially be an implementation of
+StiCo \cite{Ranjbar-Sahraei2012Demo}, but may have modifications dependant on
+time constraints.
+
+%Highlight changes to original specification; include why and justification
+\subsection{Changes to Original Specification} \label{desReqChanges}
+The original requirements document stated that the program will be similar to 
+StiCo and HybaCo \cite{myReq}.  The language used suggests that the final
+program will be a variant of the two algorithms.  This is no longer the case
+-- the program will be an implementation of the StiCo algorithm and a separate,
+modified program will only be available should there be enough time to
+change the original implementation.  This is to allow the time to properly
+implement the StiCo algorithm as the compiled code is used as a proof of
+concept that the constructed dark room is a viable environment for the testing
+of light based communication using the e-Puck system.
+
+%Summary of research and analysis done so far
+%summary of what was read, tested (e.g., techissues)? how outcomes affect
+%design?
+\subsection{Relevant Research and Analysis} \label{desResAnal}
+There has been some research on Stigmergic algorithms.  The main algorithm used
+within this project will be StiCo
+\cite{Ranjbar-Sahraei2012,Ranjbar-Sahraei2012Demo,Ranjbar-Sahraei2013}.
+When implemented, the algorithm can help to reduce the total area of terrain
+covered by multiple robots which would improve efficiency and the total area 
+being patrolled upon.  This algorithm will be used to show that the dark room
+that will be built is functional.
+
+BeePCo is another, different algorithmic solution in stigmergic robotics.  
+Whilst it is not applicable for the project due to it's reliance on direct
+communication between agents and would be a very different implementation 
+compared to StiCo, it can be useful with fewer robots to help monitor all of the
+area by maintaining distance through network connections.
+
+HybaCo is a combination of both StiCo and BeePCo -- initially running the latter
+algorithm whilst a direct connection is available and then switching to StiCo
+when connecting to other robots is no longer possible, perhaps due to range
+limitations \cite{Broecker2015}.  If time permits, the final deliverables will
+include HybaCo, by creating a state machine to switch between the children
+algorithms StiCo and HybaCo.

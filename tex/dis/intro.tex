@@ -1,0 +1,81 @@
+\section{Project Outline} \label{IntroOutline}
+"A robotic swarm is composed of a large number of simple physical robots. From
+the local interactions between the robots and the interactions of the robots
+with the environment, an efficient global intelligence emerges. Multi-robot
+coverage is the problem in which a swarm of robots needs to coordinate
+decentralised in order to effectively and efficiently cover an unknown
+environment. Examples include various monitoring, rescuing, and patrolling
+scenarios. The purpose of this project is to set up an experimental
+demonstrator, i.e. 'a dark room', in which multi-robot coverage experiments can
+be conducted using e-puck robots, implementing the stigmergy principle as
+observed in ant colonies. Ants use chemicals, called pheromones, to communicate
+with each other via the environment. However, despite of a few reports of using
+chemicals in robotic experiments, this is not a straightforward approach due to
+difficulties in implementation and limited extendibility. Therefore, we take
+advantage of a glow-in- the-dark foil (i.e. a foil covered by phosphorescent
+material which absorbs UV light and re-emits the absorbed light at a lower
+intensity for up to several minutes after the original excitation). As robots
+need to emit light to the glow-in-the-dark foil, each e-puck robot is equipped
+with a UV-LED pointing toward the floor. The glowing trails will take up the
+role of natural pheromones."
+
+\section{Problems Addressed by the Project} \label{IntroAddressed}
+Primarily, the project helps to improve and refine the sharing of information
+in conditions which may interfere with direct communication.  By indirectly
+communicating, the robots no longer need large amounts of memory to store
+the information, as it is held within the environment.  That way, the
+information does not need to be stored for long periods of time on the robot,
+only for enough time to process what the information means to the robot.
+
+As mentioned in the Project Outline \ref{IntroOutline}, some of the
+applications include travelling in potentially uncharted territory, or in
+dangerous situations such as searching for explosives whilst patrolling.
+There are other fields which this project could benefit from, too.  Some
+examples could include the medical profession in surgery, by having machinery
+following the lines drawn on patients instead of staying away from the
+localised information.  Another potential use could be within biology.  As this
+project aims to emulate some of the functional methods that animals have,
+successfully doing so can help us to document and understand reasons for the
+evolutionary choices that were made for the species.  This project itself does
+not focus on these potential applications - instead it is the functionality and
+implementation of an aspect that some animals possess.
+
+\section{Aims and Objectives of the Project} \label{IntroAims}
+Project aims include coding an implementation of a stigmergic algorithm for the
+'e-puck' hardware platform, which will utilise the use of glow-in-the-dark
+materials as the method of storing the localised information and processing the
+data in such a way that it allows for a uniform spread of entities across an
+area.  Plans for an area are also included within the scope, so that
+researchers have a basic platform for testing created algorithms.
+
+\section{Challenges within the Project} \label{IntroChallenges}
+There are a couple of challenges that this project has that are inherent to the
+subjects that link together as a part of the project.  As with anything which
+has robotics as it's main focus, it can be difficult to produce workable source
+code, as the platform you are writing for is different to the target
+architecture, more often than not, and have specific Application Programming
+Interfaces (APIs) which need to be utilised.
+
+Another hurdle to overcome for this project would be how the robots are
+required to have some form of autonomy.  As their reactions are based on the
+environment, meaning that each iteration can have a slightly different outcome,
+depending on the criteria.  In larger projects, this can make testing difficult
+and time-consuming.
+
+There are also challenges which affect all projects.  Potential risks such as
+time management, disorganisation and ambiguity all play a role within the 
+final outcome of the project.
+
+\section{The Produced Solution} \label{IntroProducedSolution}
+This project contains the source code for an implementation of the StiCo
+algorithm, a stigmergic methodology based on identifying a particular type of
+trail left by the agents within a robotic swarm, and then moving away from said
+trails.  This allows the agents to spread across an area in a uniform fashion,
+with each robot focusing on a particular area.  There are also some schematics
+for a proposed arena to hold the robots, allowing a testing ground to be built.
+
+\section{The Project's Success} \label{IntroSuccess}
+Unfortunately, as a generalisation, the project would be deemed a failure.
+The 'Challenges within the Project' \ref{IntroChallenges} section lists an
+overview for the reasons as to the cause - more detail will be given throughout
+this document.

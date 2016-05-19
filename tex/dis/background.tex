@@ -1,0 +1,97 @@
+\section{Background of the Project}
+%Who the project is being done for (your supervisor, and any external customer);
+The project is being completed for Professor Karl Tuyls in the
+department of Computer Science, University of Liverpool.
+The Project is also applicable for anyone wishing to build an area in which to
+conduct simulations that utilise the E-Puck platform\cite{ePuckSite}.
+
+%What the proposed solution is, how the aim will be achieved.
+The initial solution for the project involves using standalone posts, rope and
+two large pieces of cloth.  By using the ropes in a similar manner to a boxing
+ring, the solution provides flexibility in terms of arena size yet still 
+contains the e-puck robots.  The posts will hold up the large pieces of cloth
+--- a darker throw for the internal ceiling of the arena, and a lighter cloth
+for the theoretical 'roof' of the structure.  The paler cloth reflects most 
+external light which would otherwise cover the sectioned
+area; the darker colour absorbs light within the structure.
+
+With this solution the size of the area can be modified thanks to the rope.
+The dual-layered cover prevents most light from entering the area.
+Openings that may be made within the lower layer of fabric would allow
+visual monitoring with little compromise.
+
+There are multiple research papers on decentralised robots --- for patrolling,
+there is the Edge Ant Walk (EAW) algorithm, which V. Yanovski has worked on
+\cite{Yanovski2003}.  Due to memory limitations, the demonstration will be 
+the StiCo\cite{Ranjbar-Sahraei2012} as well as the work on HybaCo
+\cite{Broecker2015}.  Research into Robotic implementations of pheromone-using
+insects will be the main area of
+research\cite{Yanovski2003,Ranjbar-Sahraei2012,Broecker2015}.
+Tangentially relevant information includes looking into Auction-based
+methods of sharing tasks\cite{Schneider2015}.
+
+\section{Existing Solutions}
+There has been previous attempts at this project, from the paper 'StiCo in
+Action' \cite{Ranjbar-Sahraei2013Demo}.  The project is very similar in
+that an implementation of the StiCo algorithm has been designed for both
+projects, for the same robots.
+
+There are also variations on the robot that you can use for this test.  It
+could be possible to use a Raspberry Pi \cite{raspberryPiSite} with it's
+camera attachment as a base for custom made robots.
+
+There's also multiple emulators for the e-puck robot, so the information can
+be simulated in the circumstance that you do not have enough robots at the
+time, or if it would be inefficient to test with the higher quantities of
+robots.  From the simulators listed \cite{ePuckSiteSimulators}, during the
+project I have attempted to test 'ENKI' (\cite{enkiSite}) as well as 'v-Rep'
+\cite{vRepSite}.  Whilst I was happy with the concept of Enki, I could not
+find out enough from the documentation to compile and test my code within this
+simulator.  V-Rep, on the other hand, had a lot of information show initially
+and I have included some images which show my progress.
+
+\section{Relevant Research}
+Information which has been of use within this project would be the website and
+documentation of the robotic platform known as the 'e-Puck'
+\cite{ePuckSite}, as it was the target platform for the project.  This robot
+is ideal as it has the requirements for the project - a light, camera and 
+propulsion.  The robot can be controlled externally via Blue-tooth as well as
+running a program.
+
+Similar theories, such as the BeePCo and HybaCo algorithms
+have also been heavily relevant within the process of this project
+\cite{Broecker2015Demo,Caliskanelli2015,Lemmens2008}, and have been used as a
+form of unofficial evaluation throughout the project as well as a valuable
+source of information in the theory, and it's application, of robotics-based
+projects.
+
+There was a lot of programs which I have had little to no experience in using,
+which were utilised within the project.  A main example would be the notion
+of coding for a platform you are not writing your source code upon.
+Personal preference is to code using simpler editors and without large
+development environments with multiple perspectives on the source code.  Whilst
+much has been realised, my preference still holds.  Another section of software
+that was utilised during the project which required research was the
+simulators, as I had no prior experience in emulating robotics.
+
+As part of the project, an arena and it's blueprints were erected to test the
+concept of using rope as the edges of an arena - reducing the amount of heavy
+parts and making a smaller storage footprint.  For this, I had learnt a basic
+knot which helps to hold the rope together and increase it's rigidity in
+between the connected posts.
+
+\section{Project Requirements}
+%What the aim of the project is, what it is intended to achieve;
+Project Aims include building the testing grounds for the robotic simulations as
+well as showing a demonstration of the arena through the use of the e-Puck
+hardware platform.  With the completion of this project, researchers have the
+capability of producing a testing ground for their experiments with the e-Puck
+hardware platform.  The demonstrative section aims to show that the arena is
+capable and performs it's required task.
+
+For the robots, an implementation of the StiCo algorithm will be applied to
+multiple e-Pucks for this project.  The program will be coded within the C
+Programming language, and will utilise header files which define functionality
+for the installed camera, wheels and LED lights whilst the source code will
+handle the calling of said functionality, plus the image processing,
+reading if there's a light trail ahead of the robot.

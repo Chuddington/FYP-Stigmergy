@@ -26,19 +26,9 @@ role of natural pheromones."
 (acquired from https://cgi.csc.liv.ac.uk/~comp39x/E-project/2015/project/1084 at
 19/10/2015 12:29)
 
+## Hard URL to the Project
+https://github.com/Chuddington/FYP-Stigmergy
 
-## Notes/To-Do List
-- mklatex -c foo.tex  -- helps clean your files after compilation
-
-### General Things to Do
-[] Have a Makefile for the Project, or some equivalent (2015-10-20)
-
-### Requirements Document
-[] Finish Statement of Deliverables (2015-10-20)
-
-[] Finish Project Conduct/Plan (2015-10-20)
-
-[] Create a Requirements-Only master LaTeX file (2015-10-20)
-
-[] Sort out the Bibliography list's style - Underlined book names seem to be
-    going past the end of the page (2015-10-20)
+## Compiling the source
+The source is found within [this file](roboCode/stico/main.c) and should able
+to be compiled using the 'make' command

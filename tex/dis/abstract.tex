@@ -1,0 +1,41 @@
+\thispagestyle{plain}
+\begin{center}
+    \textbf{Abstract}
+\end{center} \label{dissAbstract}
+A robotic swarm is composed of a large number of simple physical robots. From
+the local interactions between the robots and the interactions of the robots
+with the environment, an efficient global intelligence emerges. Multi-robot
+coverage is the problem in which a swarm of robots needs to coordinate
+decentralised in order to effectively and efficiently cover an unknown
+environment.
+
+The initial solution for the project involves using standalone posts, rope and
+two large pieces of cloth.  By using the ropes in a similar manner to a boxing
+ring, the solution provides flexibility in terms of arena size yet still 
+contains the e-puck robots.
+
+There has been previous attempts at this project, from the paper 'StiCo in
+Action' \cite{Ranjbar-Sahraei2013Demo}.  The project is very similar in
+that an implementation of the StiCo algorithm has been designed for both
+projects, for the same robots.
+
+For the robots, an implementation of the StiCo algorithm will be applied to
+multiple e-Pucks for this project.  The program will be coded within the C
+Programming language, and will utilise header files which define functionality
+for the installed camera, wheels and LED lights whilst the source code will
+handle the calling of said functionality, plus the image processing,
+reading if there's a light trail ahead of the robot.
+
+This project contains the source code for the StiCo algorithm, a stigmergic
+methodology based on identifying a particular type of trail left by the agents
+within a robotic swarm, and then moving away from said trails.
+
+For some unknown reason, the IDE was unable to find the location of the header
+files required within the program, meaning that the source code was unable to
+be compiled, so I could not test the code upon 'live' robots.  Because of this,
+I spent the time I had left in working with simulators - notably ENKI and
+v-Rep \cite{enkiSite,vRepSite}.
+
+I have used 'GitHub' as my method of storing my project \cite{GithubRepo}, as I
+enjoy the portability granted to me and the ease of use it has given me whilst
+interacting with this project.

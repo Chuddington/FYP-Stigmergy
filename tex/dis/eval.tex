@@ -1,0 +1,76 @@
+\section{How the Project is evaluated}
+The project has a couple of criteria which are broken down between the arena
+and code for the target platform.  For the robot, it should be able to
+interact with it's surroundings in some way - originally it would have been by
+the light left on glow in the dark foil through the use of the on-board camera
+and whether or not the robot can pick up and process the images would have been
+something to evaluate as well.  However, as the project was later adapted to
+interact with sound due to the change from real-world testing into
+an evaluation which is simulator-based, using the camera would have been a moot
+point.  This can be tested with a single robot by simulating a sound source
+move across a robot's area of movement to see if the robot interacts with the
+external source.  With real-world robots focusing on light, the same can be
+achieved by using a torch to simulate the localised messages.
+
+Another point of evaluation would be whether the robots interact with the
+trails left by other light sources, notably other e-Puck robots.  This original
+evaluation changed during simulations to become whether the robots react to
+other e-Puck devices sending off sound, and changing direction to compensate
+depending on the level of noise.  Again, a sound source can be simulated to act
+like a robot not being controlled by the StiCo algorithm so it can be seen
+whether the robots would be affected.  A person-controlled light source would
+have been used during physical testing to obtain the same effect.
+
+For the arena, a couple of main concepts were scrutinised.  In terms of
+functionality, the arena would have to be able to contain the robots.  This was
+tested by applying force to the edges of the constructed arena and whilst there
+was some give in the rope, there was not enough for the robot to slip
+underneath the rope and fall off of the table.
+
+Another point of evaluation for the arena would be whether the clamps could
+withstand being used as posts, and whether it could hold the glow-in-the-dark
+foil underneath them.  Whilst it is untested whether the clamps would hold the
+foil in place to reduce slipping whilst in use, the clamps were rigid enough to
+hold in place as the rope was being fully connected and tightened, so it could
+be assumed that the foil would hold under the clamps.
+
+Primarily, it was self-evaluation that drove the project.  This may not have
+been what is best for the project, due to the temperamental nature that
+robotics seems to entail.  By having a third party be a part of testing the
+project, more rigorous evaluations could have been performed by identifying
+different tests that could have been carried out.
+
+\section{A Critical Evaluation}
+\subsection{Project Outcome}
+Overall, I'm disappointed in the outcome of this project.  I believe that
+time could have been saved if I had finished fully setting up the environment
+before wanting to have something that could be produced.  If this was
+considered beforehand, maybe the project would not have taken a turn into
+simulations and other changes due to simulating the robots.  I've enjoyed
+creating the data that I have whilst on this project, but I have yet to know
+whether the code produced truly works.  I don't think that many problems would
+be had, once the header files are located - it also provides a base for others
+to work on robotics and artificial intelligence so I can be content with the
+work that's been completed, even if the output itself feels underwhelming to
+myself.
+
+\subsection{Project Strengths and Weaknesses}
+I believe that a strength in this project was the ability to adapt to the
+increasing pressures that this project has been a part of.  Without the ability
+to simulate, this project may have been in a bad condition.  Whilst there are
+more things which can go wrong in a robotics-orientated project, there is also
+more flexibility in producing results which can be used - this is not something
+I believe that can be easily said for a project that relies on a database.
+
+I believe another strength was the arena concept - the materials are
+lightweight and can be easily set up, taken down, stored and carried.  All of
+the apparatus can fit in one bag, which makes transporting the arena much 
+easier and less cumbersome.
+
+On the other hand, a major weakness within this project was my unfamiliarity
+with some of the required tools.  Instead of learning about the MPLAB X IDE, I
+chose to use 'gVim' \cite{vimSite} whilst building my source code, and in
+hindsight that was detrimental to this project.  A similar thing can be said
+for the simulators - I had not learnt anything more than basic techniques in
+simulating the robots so had simulation been a focus from the start of the
+project, it may have ended with more relevant data.

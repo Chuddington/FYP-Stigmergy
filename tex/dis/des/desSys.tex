@@ -1,0 +1,111 @@
+%description of anticipated components
+\subsection{Project Components} \label{desSysComp}
+Anticipated components for the project include documentation for each stage of
+development, source code and it's compiled version of the StiCo algorithm for
+the e-Puck robotic platform.  The final component will be a constructed arena
+for testing the source code with the e-Puck system, along with blueprints that
+are provided in the Design phase of the project.
+
+These together will complete the aim of providing a dark room for researching
+and testing of algorithms for the e-Puck system, along with a demonstration
+program to show whether the constructed arena is successful.
+
+%description of data structures to be used
+\subsection{Proposed Data Structures} \label{desSysData}
+Currently, it the project will not contain advanced data structures
+such as Sets, Queues, Arrays or Stacks.  The program will have basic data-type
+variables to store the radius of the circular path the robot will take, a 
+variable to check whether the robot has scanned a light path successfully and,
+time permitting, an integer variable to be used as a state machine - running
+StiCo initially then BeePCo/HybaCo should the user wish the state to change.
+The changing of state can be called by pressing a button on the robot, which 
+will make the agent to execute the selected algorithm.
+
+%algorithms to manipulate these data structures
+\subsubsection{Data Structure Manipulation} \label{desSysDataMan}
+With the StiCo algorithm, no user input would be required to manipulate the
+data structures in place.  When a light trail is detected, the motor strength
+to each wheel will be swapped to allow the robot to turn in the other 
+direction.  If the HybaCo algorithm is implemented concurrently, buttons on the
+e-Puck system would be used to differentiate between running the StiCo
+implementation and the HybaCo algorithm.
+
+%design of interfaces
+\subsection{Interface Design} \label{desSysInt}
+As the project is using a robotic system, the interface between user and program
+is already defined.  Extending the deliverables to include an implementation of
+the HybaCo algorithm will mean applying an event-driven stage in the program, to
+allow the user to press a button on the e-Puck system to define which algorithm
+should run.  This will act as a basic state machine so the user may choose
+which algorithm each robot executes. Lights on the robot can be used to indicate
+which state has been selected.
+
+%description of evaluation of system 
+\label{desSysEval}
+Evaluating the Project will fall into two categories:  the constructed dark
+room and the implementation of the algorithms, StiCo and potentially HybaCo
+too.
+
+The dark room will be evaluated based on how little light gets through the
+covering and how the edges can keep the robots from leaving the sectioned area.
+Testing for the light levels can be done by looking at the constructed arena to
+see how strongly the flooring glows after normalising in the environment.  A 
+torch can then be shone into the arena to see whether the floor can successfully
+hold the light for an amount of time.
+
+For evaluating the program, the robots need to interact with the light trails
+they leave behind in some form to help evaluate the effectiveness of the dark 
+room.  This is achieved by implementing the StiCo algorithm, where the robots
+will change direction when they come into contact with a light trail.
+
+\subsection{Project Pseudo-code}
+%pseudo code of main methods
+\begin{algorithm}
+  \caption{StiCo Algorithm\cite{Ranjbar-Sahraei2012Demo} }
+  \label{desSysPseuStiCo}
+  \begin{algorithmic}[1]
+  \Require Each robot can deposit/detect pheromone trails \par
+  \State Initialise: Choose circling direction (CW/CCW)
+  \Loop
+    \While{ (no pheromone is detected) }
+      \State Circle around
+      \State deposit Pheromone
+    \EndWhile
+    \If{ (interior sensor detects pheromone) }
+      \State Reverse the circling direction
+    \Else
+      \While{ (pheromone is detected) }
+        \State Rotate
+      \EndWhile
+    \EndIf
+  \EndLoop
+  \end{algorithmic}
+\end{algorithm}
+
+\subsection{Arena Design}
+The design above is based on two main concepts -- flexibility and ease of use.
+Once the glow in the dark flooring is placed, four posts are then clamped to the
+edges of the table.  This ensures the flooring does not move and provides
+stability for the rope.  Using a sheepshank knot, applied to the inner edges of
+the posts as suggested in the top down view \ref{desSysTopImg}, it is 
+estimated that to completely fence the arena with one piece of rope it should
+approximately be 11 metres.  Using rope means that the arena can be of whatever
+size is deemed appropriate, so long as there is enough to sufficiently cover the
+generated edges.
+
+Assuming a circular table, four posts, a sheepshank knot and wrapping the rope
+around each post twice, the following algorithm calculates the minimum required
+length of rope (it is suggested that you round up to the nearest half a metre 
+to make sure):
+
+\begin{algorithm}
+  \caption{Rope Length Calculator (Measurements in centimetres) }
+  \label{desSysRope}
+  \begin{algorithmic}[1]
+    \State $ Edge = 3(\sqrt{2(r^{2} ) } ) + 2 $
+    \Comment Multiplying by 3 is due to tripling the rope over
+    \State $ WrappedPost = (postPerimeter \times 2) + 2 $
+    \Comment Trailing 2's are for securing the rope
+    \State $ TotalRequiredRope = 4(Edge + WrappedPost) $
+  \end{algorithmic}
+\end{algorithm}

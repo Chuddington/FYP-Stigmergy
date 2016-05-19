@@ -1,0 +1,90 @@
+\section{Implementing the Solution}
+\subsection{Coding within the Project} \label{realCoding}
+The first thing that was done during the implementation section was to create
+the project folder and all necessary files through the use of an IDE known as
+'MPLAB X' \cite{mpLabXsite}.  This was so that I could focus on coding the
+solution in a more familiar text editor, and not have to worry about smaller
+details within the project, due to the autonomy that is provided with using the
+program.
+
+The source code \ref{appendCode} was originally written as a form of
+pseudo-code with a similar look to Java, as I have the most experience within
+that language.  This was purely so edit the lines of pseudo-code and paste in
+my testing files once I was sure that the code was correct.  This helped in
+laying the code out correctly and meant that I was testing the written content
+before combining the functionalities together, making the final tests easier.
+
+My original worries during this section was obtaining information from the
+camera and reading the data obtained, as I have not performed any image
+processing before within my code.  As I was inexperienced, I originally focused
+my attention on writing this section of the program, to make sure the function 
+vital to the project was completed first.  As such, configuring the robot's
+camera was the first task that was completed, and then the processing of images
+taken by camera.  The code which handles the processing is a while loop which
+goes through each pixel, stored as information within the robot's buffer, and
+checks for the highest value, which would be the lightest pixel.
+
+Once the processing code had been written, I worked on the use of this gained
+information by fulfilling the if statement within the pseudo-code
+\ref{desSysPseuStiCo} by checking whether the position of the lightest pixel
+within the current image is on the left or right side of the image.  When at
+the left side, the left wheel rotates faster to create a clockwise circle,
+moving away from this lightest pixel.  Otherwise, the right wheel would be the
+'dominant' wheel - moving anticlockwise and away from the light.
+
+Finally, I had added the prerequisite information such as the starting state
+of the robot and including the header files at the source code's starting
+lines, as well as including the header files in a separate folder within the
+repository.
+
+For some unknown reason, the IDE was unable to find the location of the header
+files required within the program, meaning that the source code was unable to
+be compiled, so I could not test the code upon 'live' robots.  Because of this,
+I spent the time I had left in working with simulators - notably ENKI and
+v-Rep \cite{enkiSite,vRepSite}.  I could not get 'webots'
+\cite{webotsSite} to unpack the archive available to me for the GNU/Linux
+distribution I am running on my home machine.
+
+I had originally attempted to use ENKI, as the simulator was 2D-based and that
+is all that's required for the project.  I had found the documentation for ENKI
+to be inadequate for my needs, and could not modify my current code base into
+something that the simulator deemed appropriate.  If I had though, I did not
+know how to modify the world's properties - specifically the flooring during
+simulation - in order to mimic glow in the dark foil that would be used for the
+live robots.
+
+I had then moved onto using the v-Rep simulator.  Whilst this was an easier
+program to use, due to it's features being more easily accessible, I still had
+the problem of flooring not being able to absorb the light from LEDs attached
+to the simulated robots.  Because of this, instead of using light as the
+localised message, I looked into using sound for the purposes of this project,
+and having the robots pick up sound from each other and move away once a
+certain noise level had been reached.  Some images of the testing are within
+the appendixes \ref{appendSoundPics} - the ring of LEDs being lit are a visual
+cue that the robots are outputting sound.
+
+\subsection{The arena and the Project}
+For the arena, I already had most of the materials required - I simply needed
+some clamps to secure the rope that was already available to me.  I started
+focusing on the implementation of an arena in the latter stages of the project.
+I had tested the concept of a rope-bound arena just before finishing my source
+code, to which I had found the concept viable.  This was due to looping the
+rope around a doubled-up 'edge' near the middle of the edge, so that the rope
+became sturdier, with less give - making sure that the robot would not push too
+far past the limit, and falling off of the table it is being held atop.
+
+However, after finding out that the source code would not compile due to
+'missing header files,' I had diverted my focus on simulations, meaning the
+arena was no longer required.
+
+\subsection{Changes between Designing and Implementing}
+There are not many changes that happened after the design phase of the project.
+A main change was shifting focus from real-world testing into using simulations
+as the mainstay of this project - an unplanned change that happened late into
+the implementation phase which brought about a new set of problems.  To then
+change the method of reading the localised information because of being unable
+to easily simulate the qualities of flooring which can store light energy; what
+was envisioned when beginning the implementation stage and what had happened
+by the end was very different.  The concepts stayed during this project's
+development, just the method of localised messages had changed due to a change
+from real-world testing to simulations.

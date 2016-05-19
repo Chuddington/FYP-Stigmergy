@@ -1,5 +1,9 @@
 \documentclass[openany,a4paper,12pt]{book}
 \usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 \usepackage{appendix}
 \usepackage{tex/plugins/todonotes}
 \usepackage{graphicx}
@@ -11,8 +15,11 @@
             doi=true,
             ]{biblatex}
 \usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{pgfkeys}
+\usepackage{pgfcalendar}
 \usepackage{pgfgantt}
-\usepackage{tex/plugins/ulem}
+\usepackage{fancyhdr}
 \usepackage{geometry}
 \usepackage{listings}
 \usepackage{float}
@@ -23,62 +30,61 @@
 \usepackage{xstring}
 \usepackage{calc}
 \usepackage{pgfopts}
-\usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{tex/plugins/tikz-uml}
 \usepackage{pdfpages}
-\usepackage{hyperref}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{breakcites}
+\usepackage{microtype}
 \usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
-    decorations.pathreplacing,decorations.pathmorphing,shapes,%
-    matrix,shapes.symbols}
-\input{tex/plugins/tikz_styles.tex}
+  decorations.pathreplacing,decorations.pathmorphing,shapes,%
+  matrix,shapes.symbols,math}
+
 
 \onehalfspacing
-\renewcommand{\chaptername}{} % Remove chapter numbering
-\addbibresource{./bib/project.bib}
+% \renewcommand{\chaptername}{} % Remove chapter numbering
+\bibliography{./bib/project.bib}
 
 \title{Stigmergy for Multi-Robot Coverage}
-\author{Michael Chadwick}
+\author{Michael Chadwick \\ ID: 200882675 \\ Professor Karl Tuyls}
 
 \begin{document}
 \maketitle
 \tableofcontents
 
-\chapter{Requirements}
-\include{tex/req}
+\include{tex/dis/abstract}
 
-%\part{Design}
-%\input{tex/des.tex}
+\chapter{Introduction}
+\include{tex/dis/intro}
 
-%\part{User Manual}
-%\input)(tex/usrMan.tex)
+\chapter{Background}
+\include{tex/dis/background}
 
-%\part{Portfolio}
-%\input{tex/portfolio.tex}
+\chapter{Data Required}
+\include{tex/dis/data}
 
-%\begin{appendices}
-%\appendixpage % Page empty but for page# and "Appendicies" precedes appendicies
-%\noappendicestocpagenum % Remove the page# from the TOC for that ^ page
-%\addappheadtotoc % "Appendicies" precedes the listing of appendicies in the TOC
+\chapter{Design}
+\include{tex/dis/des}
 
-%\chapter{Minutes}
-%\input{tex/append/minutes.tex}
-%\chapter{Screenshots}
-%\input{tex/append/screenshots.tex}
-%\chapter{Deadlines}
-%\input{tex/append/deadlines.tex}
-%\chapter{TODO}
-%\input{tex/append/todo.tex}
-%\chapter{\sout{Bugs} Accidental Features}
-%\input{tex/append/bugs.tex}
-%\chapter{Licence}
-%\input{tex/append/licence.tex}
-%\chapter{Source Listing}
-%\input{tex/append/source/source.tex}
-%\chapter{Programmers Reference Manual}
-%\includepdf[pages={-}]{refman.pdf}
-%\end{appendices}
+\chapter{Realisation}
+\include{tex/dis/real}
+
+\chapter{Evaluation}
+\include{tex/dis/eval}
+
+\chapter{Learning Points}
+\include{tex/dis/learning}
+
+\chapter{Professional Issues}
+\include{tex/dis/issues}
 
 \printbibliography
+
+\appendix
+\chapter{Design Diagrams / Pseudo-code}
+\include{tex/dis/appendDesign}
+
+\chapter{Realisation Code / Images}
+\include{tex/dis/appendReal}
 
 \end{document}
